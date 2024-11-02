@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynx Store</title>
+<link rel="icon" type="image/x-icon" href="../img/logo/web.png">
+    <link rel="icon" type="image/x-icon" href="../img/logo/web.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        function kiemtra(){
+            let user = $("#txtUser").val()
+            let pass = $("#txtPass").val()
+            let name = $("#txtName").val()
+            let email = $("#txtEmail").val()
+            let phone = $("#txtPhone").val()
+            
+            let regexuser = /^[a-zA-Z0-9]/
+            let regexpass = /^[a-zA-Z0-9]{6,32}/
+            let regexname = /^[a-zA-Z]/
+            let regexemail = /^[a-zA-Z0-9]+@[a-zA-Z0-9].[a-zA-Z]{2,4}/
+            let regexphone = /[0-9]{9,10}/
+
+            if(user.trim()==""){
+                $("#errorUser").html("Cần nhập user")
+                    return false
+            }
+            if(!regexuser.test(user)){
+                $("#errorUser").html("nhập lại tên")
+                    return false
+            }
+            $("#errorUser").html("")
+            
+            if(pass.trim()==""){
+                $("#errorPass").html("Cần nhập password")
+                    return false
+            }
+            if(!regexpass.test(pass)){
+                $("#errorPass").html("nhập lại pass từ 6-32 ký tự")
+                    return false
+            }
+            $("#errorPass").html("")
+            
+            if(name.trim()==""){
+                $("#errorName").html("Cần nhập Name")
+                    return false
+            }
+            if(!regexname.test(name)){
+                $("#errorName").html("Nhập lại Name")
+                    return false
+            }
+            $("#errorName").html("")
+                   
+            if(email.trim()==""){
+                $("#errorEmail").html("Cần nhập Email")
+                    return false
+            }
+            if(!regexemail.test(email)){
+                $("#errorEmail").html("nhập lại email example@gmail.com")
+                    return false
+            }
+            $("#errorEmail").html("")
+            
+            if(phone.trim()==""){
+                $("#errorPhone").html("Cần nhập Phonenumber")
+                    return false
+            }
+            if(!regexphone.test(phone)){
+                $("#errorPhone").html("Nhập lại Phonenumber (9-10 số)")
+                    return false
+            }
+            $("#errorPhone").html("")
+             
+            window.location.assign("../html/index.html")
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div class="header-top_left header-flex-contact">
+                    <p style="font-family:cursive;">TECH OTAKUS SAVE THE WORLD </p>
+                </div>
+                <div class="header_top_right header-flex-contact">
+                    <p>
+                        <a href=""><i class="fa-solid fa-envelope-open"></i></a>
+                    </p>
+                    <p>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </p>
+                    <p>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                    </p>
+                    <p>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </p>
+                    <p>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="header-mid">
+                <div class="header-mid_logo">
+                    <img src="../img/logo/logo1.png" alt="">
+                </div>
+                <div class="header-mid_search">
+                    <form action="">
+                        <input type="text">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-mid_cart">
+                    <p>
+                        <a href="/signin"><i class="fa-solid fa-user"></i></i></a>
+                    </p>
+                    <p>
+                        <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+                    </p>
+                </div>
+            </div>
+            <div class="header-bot">
+                <ul>
+                    <li class="active"><a href="/">Trang chủ</a></li>
+                    <li><a href="/introduce">Giới thiệu</a></li>
+                    <li><a href="/product">Sản phẩm</a></li>
+                    <li><a href="#lienhe">Liên hệ</a></li>
+                    <li><a href="/sitemap">Hệ thống cửa hàng</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="login-container">
+            <div>
+               <div class="logo">
+                  <i class="fas fa-hat-wizard"></i>
+                  <span>Lynx </span>
+               </div>
+               <div class="register">
+                  <div>Trở thành khách hàng tiềm năng của Lynx!</div>
+                  <p>Register to access all the features of our services. Manage your business in one place.</p>
+                  <div class="social">                        
+                        <a href=""><i class="fa-solid fa-envelope-open"></i></a>                                                
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>                                               
+                        <a href=""><i class="fab fa-facebook-f"></i></a>                                             
+                        <a href=""><i class="fab fa-instagram"></i></a>                                              
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                  </div>
+               </div>
+            </div>
+      
+            <div class="form-login">
+               <form action="" method="POST" class="form" id="form-2">
+                  <h3 class="heading">Đăng ký</h3>      
+                  <div class="spacer"></div>
+            
+                  <div class="form-group">
+                    <label for="email" class="form-label">Username</label>
+                    <input id="txtUser" name="email" type="text" placeholder="Enter your username" class="form-control">
+                    <span id="errorUser"></span>
+                  </div>
+            
+                  <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="txtPass" name="password" type="password" placeholder="Enter your password" class="form-control">
+                    <span id="errorPass" ></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="txtName" name="name" type="text" placeholder="Enter your name" class="form-control">
+                    <span id="errorName"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="txtEmail" name="email" type="text" placeholder="Enter your mail (@gmail.com)" class="form-control">
+                    <span id="errorEmail"></span>
+                  </div>
+      
+                  <div class="form-group">
+                    <label for="phonenumber" class="form-label">Phone number</label>
+                    <input id="txtPhone" name="phonenumber" type="text" placeholder="Enter your number" class="form-control">
+                    <span id="errorPhone"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="gender" class="form-label">Select your gender</label>
+                    <label for="gender" class="form-label">
+                        <input id="Man" name="checkbox" type="radio"class="form-control">&ensp;Men &emsp;
+                        <input id="Women" name="checkbox" type="radio"class="form-control">&ensp;Women
+                    </label>
+                    <span id="errorGender"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="date" class="form-label">Birthdate</label>
+                    <input id="date" name="date" type="date" class="form-control">
+                    <span id="errorDate"></span>
+                  </div>
+
+
+                  <div class="form-group f-term">
+                     <input id="agree" name="agree" type="checkbox" class="form-control">
+                     <label for="agree" class="form-label">I agree to the all statements in <a href="">Terms of service</a></label>               
+                     <span class="form-message"></span>
+                   </div>
+            
+                  <div class="sign-up">
+                     <div>
+                        <button type="button" onclick="kiemtra()">Đăng ký</button>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                     <a href="/signin">Đăng nhập</a>
+                  </div>
+                </form>
+            </div>
+         </div>
+
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-top_item">
+                    <ul>
+                        <li>GIỚI THIỆU</li>
+                        <li>Lynx - Cửa hàng đồng hồ thời trang quốc tế</li>
+                        <li></li>
+                        <li>Với chúng tôi, không có việc gì quan trọng hơn việc nắm bắt thời gian!</li>
+                    </ul>
+                </div>
+                <div class="footer-top_item">
+                    <ul>
+                        <li>CHÍNH SÁCH & PHÁP LÝ</li>
+                        <li>Chính sách đổi trả </li>
+                        <li>Chính sách vận chuyển</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Đều khoản dịch vụ</li>
+                        <li>Quy chế hoạt động</li>
+                    </ul>
+                </div>
+                <div class="footer-top_item">
+                    <ul id="lienhe">
+                        <li>THÔNG TIN LIÊN HỆ</li>
+                        <li>0933999000</li>
+                        <li>Fax: +84 (8) 999 000</li>
+                        <li>cskh@lynxstorevie.com</li>
+                        <li>Lynxstore Fanpage</li>
+                    </ul>
+                </div>
+                <div class="footer-top_item">
+                    <ul>
+                        <li>HANOI STORED</li>
+                        <li>33 Hàm Long, Hoàn Kiếm</li>
+                        <li>9 B7 Phạm Ngọc Thạch, Đống Đa</li>
+                    </ul>
+                    <ul>
+                        <li>TP.HCM STORED</li>
+                        <li>12 Nguyễn Văn Bảo, Gò Vấp</li>
+                        <li>45 Đ. Đinh Tiên Hoàng, Bến Nghé, Quận 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <div class="footer-bottom_left">
+                <p> Copyright © 2022 by Lynx store. Powered by Vo Anh Hao</p> 
+                </div>
+                <div class="footer-bottom_right">
+                    <img src="../img/footer/footer.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
