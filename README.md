@@ -12,6 +12,7 @@ Dùng Visual Studio Code mở project lên ở thư mục gốc
 mở terminal và chạy cái của nợ nàyyyyy ↓
 
 npm install express mysql2 express-session body-parser dotenv ejs
+
 nếu mà đéo chạy được thì tự npm install từng cái nhé =))
 
 ![image](https://github.com/user-attachments/assets/0dc3c0d1-9fb9-4d8d-8f43-878e3b9f84e1)
