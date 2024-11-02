@@ -1,7 +1,9 @@
 # WEB
 môi trường cần có : NodeJS
 down cái của nợ này ở đây → https://nodejs.org/en 
+
 hoặc check xem có NodeJS trong máy không
+
 mở terminal và chạy cái của nợ này ↓
 
 ![image](https://github.com/user-attachments/assets/c78efff5-0e14-4daf-9d1c-094b1b543bae)
@@ -9,6 +11,7 @@ mở terminal và chạy cái của nợ này ↓
 ![image](https://github.com/user-attachments/assets/26b54a07-3f2c-4808-b293-68d444ececdb)
 
 Dùng Visual Studio Code mở project lên ở thư mục gốc
+
 mở terminal và chạy cái của nợ nàyyyyy ↓
 
 npm install express mysql2 express-session body-parser dotenv ejs
