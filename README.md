@@ -8,9 +8,9 @@ mở terminal và chạy cái của nợ này ↓
 
 ![image](https://github.com/user-attachments/assets/26b54a07-3f2c-4808-b293-68d444ececdb)
 
-=============/=============
 Dùng Visual Studio Code mở project lên ở thư mục gốc
-mở terminal và chạy cái của nợ này ↓
+mở terminal và chạy cái của nợ nàyyyyy ↓
+
 npm install express mysql2 express-session body-parser dotenv ejs
 nếu mà đéo chạy được thì tự npm install từng cái nhé =))
 
